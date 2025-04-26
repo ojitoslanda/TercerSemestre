@@ -13,6 +13,7 @@ class Conexion{
         $this->clave = "";
         $this->database = "minimarket_db";
     }
+    //Destructor
     public function __destruct(){ }
     // Funcion para conectar
     public function conectar(){
@@ -31,6 +32,31 @@ class Conexion{
     // SET para establecer o enviar DATOS
     public function setEjecucionQuery($sql){
         return $this->conexion->query($sql);
+    }
+    //Get and set
+    public function getServidor(){
+        return $this->servidor;
+    }
+    public function getUser(){
+        return $this->user;
+    }
+    public function getClave(){
+        return $this->clave;
+    }
+    public function getDatabase(){
+        return $this->database;
+    }
+    public function setServidor($servidor){
+        $this->servidor = $servidor;
+    }
+    public function setUser($user){
+        $this->user = $user;
+    }
+    public function setClave($servidor){
+        $this->clave = $servidor;
+    }
+    public function setDatabase($database){
+        $this->database = $database;
     }
 }
 
