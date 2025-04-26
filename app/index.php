@@ -2,7 +2,7 @@
 //abrir php
 
 /*Requerir una vez para ingresar a la pagina */
-require_once 'views/index.html'; 
+require_once 'views/login.php'; 
 
 //cerrar php
 ?> 
