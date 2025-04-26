@@ -13,9 +13,7 @@ class Conexion{
         $this->clave = "";
         $this->database = "minimarket_db";
     }
-    public function __construct(){ }
-
-
+    public function __destruct(){ }
     // Funcion para conectar
     public function conectar(){
         $this->conexion = new mysqli($this->servidor,$this->user,$this->clave,$this->database);
@@ -24,16 +22,15 @@ class Conexion{
     public function cerrarConexion(){
         $this->conexion->close();
     }
-
     //Metodo o funcion que devuelve un registro: SELECT
     // GET -> para obtener
     public function getEjecucionQuery($sql){
-
+        return $this->conexion->query($sql);
     }
     //Metodo o funcion que devuelve un valor : INSERT, UPDATE, DELETE
     // SET para establecer o enviar DATOS
     public function setEjecucionQuery($sql){
-        
+        return $this->conexion->query($sql);
     }
 }
 
