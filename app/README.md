@@ -1,2 +1,0 @@
-# AdminLTE
-TERCER SEMESTRE
