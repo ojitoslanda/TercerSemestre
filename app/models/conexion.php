@@ -33,7 +33,7 @@ class Conexion{
     public function setEjecucionQuery($sql){
         return $this->conexion->query($sql);
     }
-    //Get and set
+    //Getter and setter
     public function getServidor(){
         return $this->servidor;
     }
