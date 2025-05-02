@@ -25,12 +25,12 @@ class Conexion{
     }
     //Metodo o funcion que devuelve un registro: SELECT
     // GET -> para obtener
-    public function getEjecucionQuery($sql){
+    public function getEjecutionQuery($sql){
         return $this->conexion->query($sql);
     }
     //Metodo o funcion que devuelve un valor : INSERT, UPDATE, DELETE
     // SET para establecer o enviar DATOS
-    public function setEjecucionQuery($sql){
+    public function setEjecutionQuery($sql){
         return $this->conexion->query($sql);
     }
     //Getter and setter
