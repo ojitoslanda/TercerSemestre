@@ -2,9 +2,10 @@
   session_start();
   if(isset($_SESSION["usuario_sesion"])){
     $nombre_usuario = $_SESSION["usuario_sesion"]["nombre"];
-    echo $nombre_usuario;
+    $apellido_usuario = $_SESSION["usuario_sesion"]["apellido"];
   }else{
     echo "No existe la sessión";
+    exit();
   }
 ?>
 <!DOCTYPE html>
@@ -48,7 +49,7 @@
     <!-- Date Picker -->
     <link
       rel="stylesheet"
-      href="views/html/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"
+      href="html/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"
     />
     <!-- Daterange picker -->
     <link
@@ -145,7 +146,11 @@
                     class="user-image"
                     alt="User Image"
                   />
-                  <span class="hidden-xs">Alexander Pierce</span>
+                  <span class="hidden-xs">
+                    <?php //inicio
+                      echo $nombre_usuario." ".$apellido_usuario
+                    //cierre ?>
+                  </span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
@@ -157,7 +162,9 @@
                     />
 
                     <p>
-                      Alexander Pierce - Web Developer
+                      <?php //inicio
+                      echo $nombre_usuario." ".$apellido_usuario
+                    //cierre ?> - Web Developer
                       <small>Member since Nov. 2012</small>
                     </p>
                   </li>
@@ -205,7 +212,9 @@
               />
             </div>
             <div class="pull-left info">
-              <p>Alexander Pierce</p>
+              <p><?php //inicio
+                      echo $nombre_usuario." ".$apellido_usuario
+                    //cierre ?></p>
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
