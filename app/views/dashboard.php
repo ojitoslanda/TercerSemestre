@@ -4,8 +4,9 @@
     $nombre_usuario = $_SESSION["usuario_sesion"]["nombre"];
     $apellido_usuario = $_SESSION["usuario_sesion"]["apellido"];
   }else{
-    echo "No existe la sessión";
-    exit();
+    header("location: ../index.php");
+    // echo "No existe la sessión";
+    // exit();
   }
 ?>
 <!DOCTYPE html>
