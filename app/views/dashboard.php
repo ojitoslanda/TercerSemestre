@@ -82,12 +82,7 @@
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
           <!-- Sidebar toggle button-->
-          <a
-            href="#"
-            class="sidebar-toggle"
-            data-toggle="push-menu"
-            role="button"
-          >
+          <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
             <span class="sr-only">Toggle navigation</span>
           </a>
           <div class="navbar-custom-menu">
@@ -161,39 +156,20 @@
                       class="img-circle"
                       alt="User Image"
                     />
-
                     <p>
                       <?php //inicio
                       echo $nombre_usuario." ".$apellido_usuario
-                    //cierre ?> - Web Developer
+                     //cierre ?> - Web Developer
                       <small>Member since Nov. 2012</small>
                     </p>
-                  </li>
-                  <!-- Menu Body -->
-                  <li class="user-body">
-                    <div class="row">
-                      <div class="col-xs-4 text-center">
-                        <a href="#">Followers</a>
-                      </div>
-                      <div class="col-xs-4 text-center">
-                        <a href="#">Sales</a>
-                      </div>
-                      <div class="col-xs-4 text-center">
-                        <a href="#">Friends</a>
-                      </div>
-                    </div>
-                    <!-- /.row -->
                   </li>
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                      <a href="#" class="btn btn-default btn-flat">Perfil</a>
                     </div>
                     <div class="pull-right">
-                      <a href="../controllers/CerrarSesion.php" 
-                         class="btn btn-default btn-flat">
-                          Cerrar Sesion
-                      </a>
+                      <a href="../controllers/cerrar_sesion.php" class="btn btn-default btn-flat"> Cerrar Sesion</a>
                     </div>
                   </li>
                 </ul>
@@ -209,11 +185,7 @@
           <!-- Sidebar user panel -->
           <div class="user-panel">
             <div class="pull-left image">
-              <img
-                src="html/dist/img/user2-160x160.jpg"
-                class="img-circle"
-                alt="User Image"
-              />
+              <img src="html/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
               <p><?php //inicio
@@ -225,75 +197,62 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="active treeview">
+            <li class="active">
+              <a href="#"> <i class="fa fa-dashboard"></i> <span>Dashboard</span>  </a>
+            </li>
+            <li class="treeview">
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                <i class="fa fa-table"></i> <span>Clientes</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li class="active">
-                  <a href="#"
-                    ><i class="fa fa-circle-o"></i> Dashboard v1</a
-                  >
+                <li>
+                  <a href="#"><i class="fa fa-circle-o"></i> Sub Item 1</a>
                 </li>
                 <li>
-                  <a href="#"
-                    ><i class="fa fa-circle-o"></i> Dashboard v2</a
-                  >
+                  <a href="#"><i class="fa fa-circle-o"></i> Sub Item 2</a>
                 </li>
               </ul>
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-edit"></i> <span>Forms</span>
+                <i class="fa fa-edit"></i> <span>Productos</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
                 <li>
-                  <a href="#"
-                    ><i class="fa fa-circle-o"></i> General Elements</a
-                  >
+                  <a href="#"><i class="fa fa-circle-o"></i> Sub Item 1 </a>
                 </li>
                 <li>
-                  <a href="#"
-                    ><i class="fa fa-circle-o"></i> Advanced Elements</a
-                  >
+                  <a href="#"><i class="fa fa-circle-o"></i> Sub Item 2 </a>
                 </li>
                 <li>
-                  <a href="#"
-                    ><i class="fa fa-circle-o"></i> Editors</a
-                  >
+                  <a href="#"><i class="fa fa-circle-o"></i> Sub Item 3</a>
                 </li>
               </ul>
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-table"></i> <span>Tables</span>
+                <i class="fa fa-table"></i> <span>Usuarios</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
                 <li>
-                  <a href="#"
-                    ><i class="fa fa-circle-o"></i> Simple tables</a
-                  >
+                  <a href="#"><i class="fa fa-circle-o"></i> Sub Item 1</a>
                 </li>
                 <li>
-                  <a href="#"
-                    ><i class="fa fa-circle-o"></i> Data tables</a
-                  >
+                  <a href="#"><i class="fa fa-circle-o"></i> Sub Item 2</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#"
-                ><i class="fa fa-book"></i> <span>Documentation</span></a
-              >
+              <a href="#"><i class="fa fa-book"></i> <span>Ventas</span> </a>
             </li>
           </ul>
         </section>
@@ -303,14 +262,9 @@
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-          <h1>
-            Dashboard
-            <small>Control panel</small>
-          </h1>
+          <h1> Dashboard <small>Control panel</small> </h1>
           <ol class="breadcrumb">
-            <li>
-              <a href="#"><i class="fa fa-dashboard"></i> Home</a>
-            </li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Dashboard</li>
           </ol>
         </section>
@@ -322,7 +276,6 @@
               <div class="small-box bg-aqua">
                 <div class="inner">
                   <h3>150</h3>
-
                   <p>New Orders</p>
                 </div>
                 <div class="icon">
@@ -389,11 +342,7 @@
       <!-- Footer -->
       <footer class="main-footer">
         <div class="pull-right hidden-xs"><b>Version</b> 2.4.13</div>
-        <strong
-          >Copyright &copy; 2014-2019
-          <a href="https://adminlte.io">AdminLTE</a>.</strong
-        >
-        All rights reserved.
+        <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights reserved.
       </footer>
     </div>  <!-- FINAL DEL DIV DEL CONTENEDOR -->
     <!-- jQuery 3 -->

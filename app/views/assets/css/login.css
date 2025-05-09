@@ -1,0 +1,115 @@
+/* font-family: 'Orbitron', aqui importo de google font el ORBITRON osea el FUENTE DE LETRA*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
+
+
+/*  Esto significa que dare a "todo" absolutamente "todo" el documento del login un texto que sea de fuente futurista*/
+*{
+    font-family: 'Orbitron', Arial, sans-serif; /* Fuente más futurista */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/fondo1.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+form {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    width: 320px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    color: #00ffff;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out; /* <--- aca utilizo el fadeIn osea inicializo para asi poder utilizar abajo*/
+}
+
+/*HACER ANIMACIONES*/
+/*AQUI DECLARO EL FADEIN es como una variable */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 93%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #00ffff;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00ffff;
+    border-color: #00ffff;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #00ffff, #007BFF);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 12px #00ffff;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(90deg, #00e0ff, #0056b3);
+    box-shadow: 0 0 20px #00ffff;
+    transform: scale(1.03);
+}
