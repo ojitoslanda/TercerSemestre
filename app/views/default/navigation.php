@@ -125,69 +125,97 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="active">
-              <a href="#"> <i class="fa fa-dashboard"></i> <span>Dashboard</span>  </a>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-user-plus"></i> <span>Clientes</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li>
-                  <a href="#"><i class="fa fa-circle-o"></i> Sub Item 1</a>
+              <?php 
+              // 1 = ADMIN  -- 2 = USUARIO NORMAL
+              if($privilegios_usuario == 1){
+              ?>
+                <!-- Inicio Escribimos el html -->
+                <li class="active">
+                  <a href="#"> <i class="fa fa-dashboard"></i> <span>Dashboard</span>  </a>
+                </li>
+                <li class="treeview">
+                  <a href="#">
+                    <i class="fa fa-user-plus"></i> <span>Clientes</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu">
+                    <li>
+                      <a href="#"><i class="fa fa-circle-o"></i> Sub Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-circle-o"></i> Sub Item 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="treeview">
+                  <a href="#">
+                    <i class="fa fa-cube"></i> <span>Productos</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu">
+                    <li>
+                      <a href="#"><i class="fa fa-circle-o"></i> Sub Item 1 </a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-circle-o"></i> Sub Item 2 </a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-circle-o"></i> Sub Item 3</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="treeview">
+                  <a href="#">
+                    <i class="fa fa-users"></i> <span>Usuarios</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu">
+                    <li>
+                      <a href="#"><i class="fa fa-circle-o"></i> Sub Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-circle-o"></i> Sub Item 2</a>
+                    </li>
+                  </ul>
+                </li>
+                 <li>
+                  <a href="#"><i class="fa fa-shopping-cart"></i> <span>Ventas</span> </a>
+                </li>
+                 <!-- Fin del escribir del html -->
+              <?php
+              }else{
+               ?>
+                <!-- Inicio Escribimos el html -->
+                <li class="treeview">
+                  <a href="#">
+                    <i class="fa fa-user-plus"></i> <span>Clientes</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu">
+                    <li>
+                      <a href="#"><i class="fa fa-circle-o"></i> Sub Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-circle-o"></i> Sub Item 2</a>
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-circle-o"></i> Sub Item 2</a>
+                  <a href="#"><i class="fa fa-shopping-cart"></i> <span>Ventas</span> </a>
                 </li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-cube"></i> <span>Productos</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li>
-                  <a href="#"><i class="fa fa-circle-o"></i> Sub Item 1 </a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-circle-o"></i> Sub Item 2 </a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-circle-o"></i> Sub Item 3</a>
-                </li>
-              </ul>
-            </li>
-            <?php 
-              if(){
-                
-
+                 <!-- Fin del escribir del html -->
+              <?php  
               }
-            ?>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-users"></i> <span>Usuarios</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li>
-                  <a href="#"><i class="fa fa-circle-o"></i> Sub Item 1</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-circle-o"></i> Sub Item 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-shopping-cart"></i> <span>Ventas</span> </a>
-            </li>
+              ?>
+
           </ul>
         </section>
         <!-- /.sidebar -->
