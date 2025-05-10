@@ -38,24 +38,29 @@
         <!-- Main content -->
         <section class="content">
           <div class="row">
+            <div class="col-lg-12">
             <!--  INICIO DE FORMULARIO -->
-            <form>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+                <form action="" method="post"> 
+                <div class="mb-3">
+                    <label for="dni" class="form-label">DNI</label>
+                    <input type="text" class="form-control" id="dni">
+                </div>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="nombre" class="form-label">Correo electronico</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </form>
             <!--  FIN DE FORMULARIO-->
+            </div>
           </div>
         </section>
       </div>
