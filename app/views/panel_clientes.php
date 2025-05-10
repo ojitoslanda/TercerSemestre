@@ -40,22 +40,22 @@
           <div class="row">
             <div class="col-lg-12">
             <!--  INICIO DE FORMULARIO -->
-                <form action="" method="post"> 
+                <form action="../controllers/ClienteController.php" method="post"> 
                 <div class="mb-3">
                     <label for="dni" class="form-label">DNI</label>
-                    <input type="text" class="form-control" id="dni">
+                    <input type="text" class="form-control" id="dni" name="dni_c">
                 </div>
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre">
+                    <input type="text" class="form-control" id="nombre" name="nombre_c">
                 </div>
                 <div class="mb-3">
                     <label for="apellido" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="apellido">
+                    <input type="text" class="form-control" id="apellido" name="apellido_c">
                 </div>
-                <div class="mb-3 mt-3">
+                <div class="mb-4 mt-3">
                     <label for="nombre" class="form-label">Correo electronico</label>
-                    <input type="email" class="form-control" id="email">
+                    <input type="email" class="form-control" id="email" name="correo_c">
                 </div>
                     <button type="submit" class="btn btn-primary">Registrar</button>
                 </form>

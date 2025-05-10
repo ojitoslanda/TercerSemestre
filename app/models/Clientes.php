@@ -10,7 +10,7 @@ class Clientes{
         //Utilizamos la funcion o metodo conectar()
         $cn->conectar();
         //Almacenamos en una variable($sql) los comandos de INSERT
-        $sql = "insert into tb_clientes(dni,nombre,apellido,correo)values('$dni','$nom','$ape','$correo')";
+        $sql = "insert into tb_cliente(dni,nombre,apellido,correo)values('$dni','$nom','$ape','$correo')";
         //Ejecutamos la funcion
         return $cn->getEjecutionQuery($sql);
     }
