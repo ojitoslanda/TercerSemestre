@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-04-2025 a las 21:24:34
+-- Tiempo de generación: 10-05-2025 a las 22:05:29
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -41,6 +41,28 @@ INSERT INTO `tb_categoria` (`id_categoria`, `descripcion`, `estado`) VALUES
 (3, 'Calzado', 0),
 (5, 'Bebidas', 0),
 (6, 'Vegetales', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tb_cliente`
+--
+
+CREATE TABLE `tb_cliente` (
+  `id_cliente` int(11) NOT NULL,
+  `dni` int(9) DEFAULT NULL,
+  `nombre` varchar(30) NOT NULL,
+  `apellido` varchar(30) NOT NULL,
+  `correo` varchar(30) DEFAULT NULL,
+  `estado` enum('Activo','Negativo') DEFAULT 'Activo'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `tb_cliente`
+--
+
+INSERT INTO `tb_cliente` (`id_cliente`, `dni`, `nombre`, `apellido`, `correo`, `estado`) VALUES
+(1, 1212321, 'asdasd', 'asdasd', 'sdaasdasdasd@gmail.com', 'Activo');
 
 -- --------------------------------------------------------
 
@@ -83,8 +105,8 @@ CREATE TABLE `tb_rol` (
 --
 
 INSERT INTO `tb_rol` (`id_rol`, `nombre_rol`) VALUES
-(1, 'Normal'),
-(2, 'Super Administrador');
+(1, 'admin'),
+(2, 'usuario');
 
 -- --------------------------------------------------------
 
@@ -110,8 +132,8 @@ CREATE TABLE `tb_usuario` (
 --
 
 INSERT INTO `tb_usuario` (`id_usuario`, `nombre`, `apellido`, `usuario`, `password`, `telefono`, `id_rol`, `estado`, `created_at`, `updated_at`) VALUES
-(1, 'Juan', 'Pérez', 'cajero', '123', '987654321', 1, 1, '2025-03-13 19:08:50', '2025-04-03 18:17:26'),
-(2, 'María', 'Gómez', 'admin', '123', '912345678', 2, 1, '2025-03-13 19:08:50', '2025-03-15 18:03:39');
+(1, 'Juan', 'Pérez', 'cajero', '123', '987654321', 2, 1, '2025-03-13 19:08:50', '2025-05-09 19:18:34'),
+(2, 'María', 'Gómez', 'admin', '123', '912345678', 1, 1, '2025-03-13 19:08:50', '2025-05-09 19:18:34');
 
 --
 -- Índices para tablas volcadas
@@ -122,6 +144,14 @@ INSERT INTO `tb_usuario` (`id_usuario`, `nombre`, `apellido`, `usuario`, `passwo
 --
 ALTER TABLE `tb_categoria`
   ADD PRIMARY KEY (`id_categoria`);
+
+--
+-- Indices de la tabla `tb_cliente`
+--
+ALTER TABLE `tb_cliente`
+  ADD PRIMARY KEY (`id_cliente`),
+  ADD UNIQUE KEY `dni` (`dni`),
+  ADD UNIQUE KEY `correo` (`correo`);
 
 --
 -- Indices de la tabla `tb_producto`
@@ -153,6 +183,12 @@ ALTER TABLE `tb_usuario`
 --
 ALTER TABLE `tb_categoria`
   MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de la tabla `tb_cliente`
+--
+ALTER TABLE `tb_cliente`
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_producto`
