@@ -215,7 +215,6 @@
               <?php  
               }
               ?>
-
           </ul>
         </section>
         <!-- /.sidebar -->
