@@ -50,16 +50,19 @@
                             <th>Opciones</th>
                         </tr>
                         <?php 
-                         require_once("../models/Clientes.php");
+                         require_once("../models/Clientes.php");    
+                          $objeto = new Clientes();
+                          $resultado_lista = $objeto->reportes_clientes();
+                          while($fila = $resultado_lista->fetch_array(MYSQLI_ASSOC)){
+                            echo "<tr>";
+                            echo "<td>".$fila['dni']."</td>";
+                            echo "<td>".$fila['nombre']."</td>";
+                            echo "<td>".$fila['apellido']."</td>";
+                            echo "<td>".$fila['correo']."</td>";
+                            echo "<td>".$fila['estado']."</td>";
+                            echo "</tr>";
+                          };
                         ?>
-                        <tr> 
-                            <td>70428180</td>
-                            <td>AA</td>
-                            <td>BB</td>
-                            <td>CC</td>
-                            <td>DD</td>
-                            <td>EE</td>
-                        </tr>
                     </table>
                 <!--  FIN DE REPORTE DE CLIENTE-->
             </div>
