@@ -38,19 +38,27 @@
         <!-- Main content -->
         <section class="content">
           <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-12">
                 <!--  INICIO REPORTE DE CLIENTE -->
-                    <table>
+                    <table class="table table-hover">
                         <tr>
-                            <th>DNI</th>
+                            <th>DNI</th> 
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Correo</th>
                             <th>Estado</th>
                             <th>Opciones</th>
                         </tr>
-                        <tr>
-                            
+                        <?php 
+                         require_once("../models/Clientes.php");
+                        ?>
+                        <tr> 
+                            <td>70428180</td>
+                            <td>AA</td>
+                            <td>BB</td>
+                            <td>CC</td>
+                            <td>DD</td>
+                            <td>EE</td>
                         </tr>
                     </table>
                 <!--  FIN DE REPORTE DE CLIENTE-->
