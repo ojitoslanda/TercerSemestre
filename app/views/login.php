@@ -19,7 +19,6 @@ if (isset($_SESSION["usuario_sesion"])) {
     <!-- Poner icono -->
     <link rel="shortcut icon" href="#" type="image/x-icon"> 
 </head>
-
 <body>
     <form action="controllers/UserController.php" method="POST" style="border:1px solid;">
         <fieldset>

@@ -38,7 +38,7 @@
         <!-- Main content -->
         <section class="content">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-3">
             <!--  INICIO DE FORMULARIO -->
                 <form action="../controllers/ClienteController.php" method="post"> 
                 <div class="mb-3">
