@@ -145,7 +145,7 @@
                       <a href="panel_clientes.php"><i class="fa fa-circle-o"></i> Registrar</a>
                     </li>
                     <li>
-                      <a href="#"><i class="fa fa-circle-o"></i> Reportes</a>
+                      <a href="panel_clientes_reportes.php"><i class="fa fa-circle-o"></i> Reportes</a>
                     </li>
                   </ul>
                 </li>
@@ -204,7 +204,7 @@
                       <a href="panel_clientes.php"><i class="fa fa-circle-o"></i> Registrar</a>
                     </li>
                     <li>
-                      <a href="#"><i class="fa fa-circle-o"></i> Reportes</a>
+                      <a href="panel_clientes_reportes.php"><i class="fa fa-circle-o"></i> Reportes</a>
                     </li>
                   </ul>
                 </li>

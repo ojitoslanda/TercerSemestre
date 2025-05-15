@@ -14,5 +14,18 @@ class Clientes{
         //Ejecutamos la funcion
         return $cn->getEjecutionQuery($sql);
     }
+
+    // Funcion para listar o dar reportes de todos los clientes
+    public function reportes_clientes(){
+        //Inicializamos la conexion.php
+        $cn = new conexion();
+        //Utilizamos la funcion o metodo conectar()
+        $cn->conectar();
+        //Comando para consultar la lista
+        $sql = "SELECT * FROM tb_cliente";
+        //Ejecutamos el comando
+         return $cn->getEjecutionQuery($sql);
+    }
+
 }
 ?>
