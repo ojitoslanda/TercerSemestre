@@ -64,7 +64,7 @@
                                     <button id='btnEditar' class='btn bg-light-blue-active color-palette'>
                                       <i class='fa fa-fw fa-edit'></i>
                                     </button>
-                                    <button id='btnEliminar' class='btn bg-red-active color-palette'>
+                                    <button id='btnEliminar' data-dni='$fila[dni]' class='btn bg-red-active color-palette'>
                                      <i class='fa fa-fw fa-trash'></i>
                                     </button>
                                   </td>";
@@ -86,13 +86,14 @@
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title">Modal Eliminar Cliente</h4>
             </div>
-            <div class="modal-body">
-              <p>¿Deseas eliminar al usuario?</p>
-              <p>Si es así presiona el boton</p>
+            <div class="modal-body text-center">
+              <input type="text" value="0" id="id_cliente">
+              <h2>¿Estas seguro que deseas eliminar al cliente?</h2>
+              <h4>Esta acción no es reversible</h4>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-danger" id="btnEliminarCliente">Confirmar</button>
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
