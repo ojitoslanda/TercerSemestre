@@ -36,11 +36,11 @@
           </ol>
         </section>
         <!-- Main content -->
-        <section class="content">
+        <section class="content ">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 table-responsive">
                 <!--  INICIO REPORTE DE CLIENTE -->
-                    <table class="table table-hover">
+                    <table class="table table-hover" style="background:#FFFF;">
                         <tr>
                             <th>DNI</th> 
                             <th>Nombre</th>
@@ -60,6 +60,14 @@
                             echo "<td>".$fila['apellido']."</td>";
                             echo "<td>".$fila['correo']."</td>";
                             echo "<td>".$fila['estado']."</td>";
+                            echo "<td>
+                                    <button id='btnEditar' class='btn bg-light-blue-active color-palette'>
+                                      <i class='fa fa-fw fa-edit'></i>
+                                    </button>
+                                    <button id='btnEliminar' class='btn bg-red-active color-palette'>
+                                     <i class='fa fa-fw fa-trash'></i>
+                                    </button>
+                                  </td>";
                             echo "</tr>";
                           };
                         ?>
@@ -73,6 +81,7 @@
       <?php require_once("default/footer.php");?>
     </div>  <!-- FINAL DEL DIV DEL CONTENEDOR -->
         <!-- Todos los scripts -->
+      <script src="assets/js/reportes_clientes.js"></script>
       <?php require_once("default/links-script.php");?>
   </body>
 </html>
