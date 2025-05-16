@@ -1,6 +1,21 @@
 //Almacenar en una variable 
-const btnEditar = document.querySelector("#btnEditar");
-const btnEliminar = document.querySelector("#btnEliminar");
+// All = todo
+// querySelectorAll -> Significa selecionar todos los ID que tienen ese BOTON
+const btnEditar = document.querySelectorAll("#btnEditar");
+const btnEliminar = document.querySelectorAll("#btnEliminar");
+//Ahora consulto con un forEach, para saber cuantos botones hay con ese ID
+btnEditar.forEach(botonsito => {
+    //Luego a todos los botones le hago una accion de escucha
+    botonsito.addEventListener('click', function(){
+         alert("Este boton es de editar")
+    });
+});
 
-console.log(btnEditar)
-console.log(btnEliminar)
+//Ahora consulto con un forEach, para saber cuantos botones hay con ese ID
+btnEliminar.forEach(botonsito => {
+    //Luego a todos los botones le hago una accion de escucha
+    botonsito.addEventListener('click', function(){
+         $('#modalEliminar').modal('show') //Jquery codigo
+         //alert("Eliminar")
+    });
+});
