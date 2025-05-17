@@ -22,7 +22,6 @@ btnEliminar.forEach(botonsito => {
          //Guardo el dni de la persona en elemento del html de INPUT DNI
          inputDNI.value = dni_de_persona;
         //  alert(dni_de_persona + " ___ " + inputDNI)
-        
     });
 });
 
@@ -44,5 +43,6 @@ btnEliminarConfirmar.addEventListener('click', function(){
                     }
                 }
             })
+            window.location.reload(); // CON ESTO SE ACTUALIZA LA PAGINA COMPLETA
         // ============== FINAL DE AJAX CON JQUERY ======================== //
 })
