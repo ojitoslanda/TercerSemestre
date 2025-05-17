@@ -16,6 +16,11 @@ btnEliminar.forEach(botonsito => {
     //Luego a todos los botones le hago una accion de escucha
     botonsito.addEventListener('click', function(){
          $('#modalEliminar').modal('show') //Jquery codigo
-         //alert("Eliminar")
+         //Almacenamos en una variable llamada INPUTDNI
+         const inputDNI = document.getElementById("id_cliente");
+         const dni_de_persona = botonsito.dataset.dni;
+         //Guardo el dni de la persona en elemento del html de INPUT DNI
+         inputDNI.value = dni_de_persona;
+        //  alert(dni_de_persona + " ___ " + inputDNI)
     });
 });
