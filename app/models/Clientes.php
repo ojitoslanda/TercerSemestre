@@ -27,5 +27,16 @@ class Clientes{
          return $cn->getEjecutionQuery($sql);
     }
 
+    // Funcion para eliminra clientes
+    public function eliminar_cliente_por_dni($dni){
+        //Inicializamos la conexion.php
+        $cn = new conexion();
+        //Utilizamos la funcion o metodo conectar()
+        $cn->conectar();
+        //Comando para consultar la lista
+        $sql = "DELETE FROM tb_cliente WHERE dni = '$dni' ";
+        //Ejecutamos el comando
+         return $cn->setEjecutionQuery($sql);
+    }
 }
 ?>

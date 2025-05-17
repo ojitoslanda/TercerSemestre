@@ -87,7 +87,7 @@
               <h4 class="modal-title">Modal Eliminar Cliente</h4>
             </div>
             <div class="modal-body text-center">
-              <input type="text" value="0" id="id_cliente">
+              <input type="hidden" value="0" id="id_cliente">
               <h2>¿Estas seguro que deseas eliminar al cliente?</h2>
               <h4>Esta acción no es reversible</h4>
             </div>

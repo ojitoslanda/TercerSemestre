@@ -22,5 +22,15 @@ btnEliminar.forEach(botonsito => {
          //Guardo el dni de la persona en elemento del html de INPUT DNI
          inputDNI.value = dni_de_persona;
         //  alert(dni_de_persona + " ___ " + inputDNI)
+        // ============== INICIO DE AJAX CON JQUERY ======================== //
+            $.ajax({
+                url: '../controllers/ClienteEliminarController.php',
+                type: 'POST',
+                data: {dni_c : inputDNI.value},
+                success: function(respuesta){
+                    alert("ELIMINACION CORRECTA");
+                }
+            })
+        // ============== FINAL DE AJAX CON JQUERY ======================== //
     });
 });
