@@ -22,15 +22,27 @@ btnEliminar.forEach(botonsito => {
          //Guardo el dni de la persona en elemento del html de INPUT DNI
          inputDNI.value = dni_de_persona;
         //  alert(dni_de_persona + " ___ " + inputDNI)
-        // ============== INICIO DE AJAX CON JQUERY ======================== //
+        
+    });
+});
+
+
+/// boton de confirmar eliminacion del modal
+const btnEliminarConfirmar = document.querySelector("#btnEliminarCliente");
+btnEliminarConfirmar.addEventListener('click', function(){
+      const inputDNI = document.getElementById("id_cliente").value;
+   // ============== INICIO DE AJAX CON JQUERY ======================== //
             $.ajax({
                 url: '../controllers/ClienteEliminarController.php',
                 type: 'POST',
-                data: {dni_c : inputDNI.value},
+                data: {dni_c : inputDNI},
                 success: function(respuesta){
-                    alert("ELIMINACION CORRECTA");
+                    if(respuesta === "yes"){
+                        alert("ELIMINACION CORRECTA");
+                    }else{
+                        alert("ELIMINACION INCORRECTA");
+                    }
                 }
             })
         // ============== FINAL DE AJAX CON JQUERY ======================== //
-    });
-});
+})
