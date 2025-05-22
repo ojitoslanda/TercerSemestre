@@ -3,11 +3,21 @@
 // querySelectorAll -> Significa selecionar todos los ID que tienen ese BOTON
 const btnEditar = document.querySelectorAll("#btnEditar");
 const btnEliminar = document.querySelectorAll("#btnEliminar");
+
 //Ahora consulto con un forEach, para saber cuantos botones hay con ese ID
 btnEditar.forEach(botonsito => {
     //Luego a todos los botones le hago una accion de escucha
     botonsito.addEventListener('click', function(){
-         alert("Este boton es de editar")
+        //  alert("Este boton es de editar")
+         $('#modalEditar').modal('show') //Jquery codigo Modal
+         const inputDNI = document.getElementById("dni");
+         const inputNombre = document.getElementById("nombre");
+         const inputApellido= document.getElementById("apellido");
+         const inputCorreo = document.getElementById("email");
+         inputDNI.value = botonsito.dataset.dni;
+         inputNombre.value = botonsito.dataset.name;
+         inputApellido.value = botonsito.dataset.lastname;
+         inputCorreo.value = botonsito.dataset.correo;
     });
 });
 
@@ -24,7 +34,6 @@ btnEliminar.forEach(botonsito => {
         //  alert(dni_de_persona + " ___ " + inputDNI)
     });
 });
-
 
 /// boton de confirmar eliminacion del modal
 const btnEliminarConfirmar = document.querySelector("#btnEliminarCliente");
@@ -45,4 +54,10 @@ btnEliminarConfirmar.addEventListener('click', function(){
             })
             window.location.reload(); // CON ESTO SE ACTUALIZA LA PAGINA COMPLETA
         // ============== FINAL DE AJAX CON JQUERY ======================== //
+})
+
+//boton de confirmar actualizacion del modal
+const btnActualizarConfirmar = document.querySelector("#btnEditarCliente");
+btnActualizarConfirmar.addEventListener('click', function(){
+    alert("ACTUALIZACION EN PROCESO");
 })
