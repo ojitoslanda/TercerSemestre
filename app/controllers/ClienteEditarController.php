@@ -10,9 +10,9 @@ $variable_apellido = $_POST['apellido_c'];
 $variable_correo = $_POST['correo_c'];
 //Creamos un condicional para saber si se actualizo correctamente
 if($objeto->editar_cliente($variable_dni,$variable_nombre,$variable_apellido,$variable_correo)){
-
+    echo "yes";
 }else{
-
+    echo "nope";
 }
 
 
