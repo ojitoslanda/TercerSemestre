@@ -147,6 +147,9 @@
                     <li>
                       <a href="panel_clientes_reportes.php"><i class="fa fa-circle-o"></i> Reportes</a>
                     </li>
+                    <li>
+                      <a href="panel_clientes_consultas.php"><i class="fa fa-circle-o"></i>Consultas</a>
+                    </li>
                   </ul>
                 </li>
                 <li class="treeview">
@@ -205,6 +208,9 @@
                     </li>
                     <li>
                       <a href="panel_clientes_reportes.php"><i class="fa fa-circle-o"></i> Reportes</a>
+                    </li>
+                    <li>
+                      <a href="panel_clientes_consultas.php"><i class="fa fa-circle-o"></i>Consultas</a>
                     </li>
                   </ul>
                 </li>
