@@ -27,7 +27,7 @@ class Clientes{
          return $cn->getEjecutionQuery($sql);
     }
 
-    // Funcion para eliminra clientes
+    // Funcion para eliminar clientes
     public function eliminar_cliente_por_dni($dni){
         //Inicializamos la conexion.php
         $cn = new conexion();
@@ -35,6 +35,20 @@ class Clientes{
         $cn->conectar();
         //Comando para consultar la lista
         $sql = "DELETE FROM tb_cliente WHERE dni = '$dni' ";
+        //Ejecutamos el comando
+         return $cn->setEjecutionQuery($sql);
+    }
+
+    // Funcion para editar clientes
+    public function editar_cliente($dni,$nombre,$apellido,$correo){
+        //Inicializamos la conexion.php
+        $cn = new conexion();
+        //Utilizamos la funcion o metodo conectar()
+        $cn->conectar();
+        //Comando para consultar la lista
+        $sql = "UPDATE tb_cliente 
+                SET nombre ='$nombre', apellido='$apellido', correo='$correo' 
+                WHERE dni = '$dni' ";
         //Ejecutamos el comando
          return $cn->setEjecutionQuery($sql);
     }

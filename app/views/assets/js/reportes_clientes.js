@@ -59,5 +59,28 @@ btnEliminarConfirmar.addEventListener('click', function(){
 //boton de confirmar actualizacion del modal
 const btnActualizarConfirmar = document.querySelector("#btnEditarCliente");
 btnActualizarConfirmar.addEventListener('click', function(){
-    alert("ACTUALIZACION EN PROCESO");
+         const inputDNI = document.getElementById("dni");
+         const inputNombre = document.getElementById("nombre");
+         const inputApellido= document.getElementById("apellido");
+         const inputCorreo = document.getElementById("email");
+       // ============== INICIO DE AJAX CON JQUERY ======================== //
+            $.ajax({
+                url: '../controllers/ClienteEditarController.php',
+                type: 'POST',
+                data: {
+                        dni_c : inputDNI.value,
+                        name_c : inputNombre.value,
+                        apellido_c : inputApellido.value,
+                        correo_c : inputCorreo.value,
+                      },
+                success: function(respuesta){
+                    if(respuesta === "yes"){
+                        alert("ACTUALIZACIÓN CORRECTA");
+                    }else{
+                        alert("ACTUALIZACIÓN INCORRECTA");
+                    }
+                }
+            })
+           // window.location.reload(); // CON ESTO SE ACTUALIZA LA PAGINA COMPLETA
+        // ============== FINAL DE AJAX CON JQUERY ======================== //
 })
