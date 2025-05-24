@@ -14,7 +14,18 @@ variable_dni.addEventListener("keyup", function (){
                 dni_c: this.value
             },
             success:function(respuesta){
-                console.log(respuesta)
+                // console.log(respuesta);
+                const variable_tabla = document.getElementById("contenedor_datos");
+                variable_tabla.innerHTML = `
+                                            <tr>
+                                                <td>#</td>
+                                                <td>12345678</td>
+                                                <td>Pepe</td>
+                                                <td>Lucho</td>
+                                                <td>lucho@gmail.com</td>
+                                                <td>Activo</td>
+                                            </tr>
+                                            `
             }
         })
         // ******** FIN  DE AJAX ******** 
