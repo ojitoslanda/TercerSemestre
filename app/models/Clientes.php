@@ -52,5 +52,18 @@ class Clientes{
         //Ejecutamos el comando
          return $cn->setEjecutionQuery($sql);
     }
+
+    // Funcion para consultar DNI y que salga todos los datos del cliente
+    public function consultar_dni_cliente($dni){
+        //Inicializamos la conexion.php
+        $cn = new conexion();
+        //Utilizamos la funcion o metodo conectar()
+        $cn->conectar();
+        //Comando para consultar la lista
+        $sql = "SELECT * FROM tb_cliente WHERE dni = '$dni' ";
+        //Ejecutamos el comando
+         return $cn->setEjecutionQuery($sql);
+    }
+
 }
 ?>

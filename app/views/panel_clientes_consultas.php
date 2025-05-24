@@ -42,7 +42,7 @@
                 <!--  INICIO CONSULTA DE CLIENTE -->
                     <div class="form-group">
                         <label for="dni">DNI</label><br>
-                        <input type="text" id="dni_cliente">
+                        <input type="text" id="dni_cliente" maxlength="8">
                     </div>
                 <!--  FIN DE CONSULTA DE CLIENTE-->
             </div>
