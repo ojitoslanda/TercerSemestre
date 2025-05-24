@@ -40,10 +40,10 @@
           <div class="row">
             <div class="col-lg-12 table-responsive">
                 <!--  INICIO CONSULTA DE CLIENTE -->
-                        <form action="#">
-                            <label for="dni">DNI</label><br>
-                            <input type="text" id="dni_cliente">
-                        </form>
+                    <div class="form-group">
+                        <label for="dni">DNI</label><br>
+                        <input type="text" id="dni_cliente">
+                    </div>
                 <!--  FIN DE CONSULTA DE CLIENTE-->
             </div>
           </div>
