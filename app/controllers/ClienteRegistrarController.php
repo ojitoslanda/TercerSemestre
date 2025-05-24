@@ -10,8 +10,8 @@ $apellido = trim($_POST['apellido_c']);
 $correo = trim($_POST['correo_c']);
 //Utilizamos el metodo o funcion para registrar
 if($objeto->registrar_cliente($dni,$nombre,$apellido,$correo)){
-    header("Location: ../views/panel_clientes.php");
+    header("Location: ../views/panel_clientes_registrar.php");
 }else{
-    header("Location: ../views/panel_clientes.php");
+    header("Location: ../views/panel_clientes_registrar.php");
 }
 ?>
